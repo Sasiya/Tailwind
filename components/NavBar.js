@@ -1,15 +1,16 @@
 /* eslint-disable @next/next/no-img-element */
 /* eslint-disable jsx-a11y/alt-text */
 /* eslint-disable react/display-name */
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 
 const NavBar = (onClick) => {
   useEffect(() => {}, []);
-  console.log("ss");
-  const handleClick = (e) => console.log("Free pizza!");
+  const [menu, setMenu] = useState(true);
+  console.log("ss", menu);
+  const handleClick = (e) => setMenu(!menu);
   return (
     <>
-      <nav className="flex items-center justify-between flex-wrap bg-background2 p-6 pl-16 ">
+      <nav className="flex items-center justify-between flex-wrap bg-background2 px-14 py-6 pl-16 sticky">
         <a href="#responsive-header">
           <img className="h-4 w-50" src="/images/mainLogo1.png" />
         </a>
@@ -58,43 +59,52 @@ const NavBar = (onClick) => {
             Logistics
           </a>
         </div>
+        <button className="lg:hidden" onClick={() => handleClick()}>
+          <img className="h-8 w-8" src="/images/menu.png" />
+        </button>
       </nav>
-      <div className="lg:hidden">
-        <ul className="">
-          <li className="active">
-            <a
-              href="#responsive-header"
-              className="block text-sm px-2 py-4 text-white bg-green-500 font-semibold"
-            >
-              Home
-            </a>
-          </li>
-          <li>
-            <a
-              href="#responsive-header"
-              className="block text-sm px-2 py-4 hover:bg-green-500 transition duration-300"
-            >
-              Services
-            </a>
-          </li>
-          <li>
-            <a
-              href="#responsive-header"
-              className="block text-sm px-2 py-4 hover:bg-green-500 transition duration-300"
-            >
-              About
-            </a>
-          </li>
-          <li>
-            <a
-              href="#responsive-header"
-              className="block text-sm px-2 py-4 hover:bg-green-500 transition duration-300"
-            >
-              Contact Us
-            </a>
-          </li>
-        </ul>
-      </div>
+      {menu && (
+        <div
+          className={`lg:hidden justify-items-center bg-red-100 ${
+            menu ? "mt-0 " : "-mt-60"
+          } `}
+        >
+          <ul>
+            <li>
+              <a
+                href="#responsive-header"
+                className="block text-sm px-2 py-4 hover:bg-green-500 transition duration-300 text-center text-lg"
+              >
+                Home
+              </a>
+            </li>
+            <li>
+              <a
+                href="#responsive-header"
+                className="block text-sm px-2 py-4 hover:bg-green-500 transition duration-300 text-center text-lg"
+              >
+                Services
+              </a>
+            </li>
+            <li>
+              <a
+                href="#responsive-header"
+                className="block text-sm px-2 py-4 hover:bg-green-500 transition duration-300 text-center text-lg"
+              >
+                About
+              </a>
+            </li>
+            <li>
+              <a
+                href="#responsive-header"
+                className="block text-sm px-2 py-4 hover:bg-green-500 transition duration-300 text-center text-lg"
+              >
+                Contact Us
+              </a>
+            </li>
+          </ul>
+        </div>
+      )}
     </>
   );
 };

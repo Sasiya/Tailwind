@@ -12,11 +12,6 @@ class MyDocument extends Document {
       <Html>
         <Head />
         <body className="bg-background">
-          <NavBar />
-          <button onClick={() => alert("hello world")}>
-            Hello Application
-          </button>
-
           <Main />
           <NextScript />
         </body>

@@ -5,7 +5,7 @@ import React, { useEffect, useState } from "react";
 
 const NavBar = (onClick) => {
   useEffect(() => {}, []);
-  const [menu, setMenu] = useState(true);
+  const [menu, setMenu] = useState(false);
   console.log("ss", menu);
   const handleClick = (e) => setMenu(!menu);
   return (

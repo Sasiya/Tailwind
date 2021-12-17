@@ -2,7 +2,7 @@ import React from "react";
 
 function StaticsCard() {
   return (
-    <div className="lg:w-4/12 max-w-md py-4 px-8 bg-white shadow-lg rounded-lg py-5">
+    <div className="lg:w-4/12 max-w-md py-4 px-8 bg-white shadow-lg rounded-lg">
       <div>
         <text className="text-gray-800 text-lg font-semibold uppercase">
           Order Statistics

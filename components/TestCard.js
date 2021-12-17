@@ -19,7 +19,7 @@ const TestCard = () => {
 
   const statCard = (amount, type) => {
     return (
-      <div className="border-2 px-2 flex items-center w-44 py-1 m-1">
+      <div className="border-2 px-2 flex items-center w-44 py-1 ">
         {switchIcon(type)}
         <div className="ml-5">
           <p className="font-semibold">{amount}</p>
@@ -67,7 +67,7 @@ const TestCard = () => {
     );
   };
   return (
-    <div className="w-9/12 px-8 bg-white shadow-inner shadow-lg rounded-lg lg:ml-5 py-4 mt-5 lg:mt-0">
+    <div className="w-9/12 px-8 bg-white shadow-inner shadow-lg rounded-lg py-4 mt-5 lg:mt-0 ml-6">
       <div className="flex flex-col justify-between h-full">
         <div className="flex items-center justify-between flex-wrap">
           {statCard(500, "To be delivered")}

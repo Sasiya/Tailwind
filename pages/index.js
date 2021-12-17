@@ -19,12 +19,12 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <NavBar onClick={() => alert("ss")} />
-      <div className="px-16 pt-4">
+      <div className="px-8 pt-4">
         <div className="lg:flex justify-between z-0 w-full">
           <StaticsCard />
           <TestCard />
         </div>
-        <div className="w-full bg-white shadow-inner z-10 mt-5 rounded-lg h-[550px] block p-7 mb-6">
+        {/* <div className="w-full bg-white shadow-inner z-10 mt-5 rounded-lg h-[550px] block p-7 mb-6">
           <div className="flex border-2 w-2/6 h-10 align-middle justify-between flex-wrap items-center px-3 text-base text-[#3C3C3C]">
             <button
               onClick={() => setSelectedTab(1)}
@@ -46,7 +46,7 @@ export default function Home() {
             </button>
           </div>
           <div className="lg:w-full h-44 border-2 mt-8">s</div>
-        </div>
+        </div> */}
       </div>
     </div>
   );

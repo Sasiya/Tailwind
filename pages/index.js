@@ -20,7 +20,7 @@ export default function Home() {
       </Head>
       <NavBar onClick={() => alert("ss")} />
       <div className="px-16 pt-4">
-        <div className="flex justify-between z-0 w-full">
+        <div className="lg:flex justify-between z-0 w-full">
           <StaticsCard />
           <TestCard />
         </div>
